@@ -575,21 +575,25 @@ async function getReply(msg) {
   }
 }
 
-async function sendMessage() {
-  const input = document.getElementById('user-input');
-  const btn = document.getElementById('send-btn');
-  const text = input.value.trim();
-  if (!text || btn.disabled) return;
-  addUser(text); input.value = ''; btn.disabled = true;
-  showTyping();
-  await new Promise(function(r){setTimeout(r,700+Math.random()*500)});
-  const reply = await getReply(text);
-  removeTyping(); addBot(reply); btn.disabled = false; input.focus();
+function quickAsk(text) {
+  var inp = document.getElementById('user-input');
+  inp.value = text;
+  sendMessage();
 }
 
-function quickAsk(text) {
-  document.getElementById('user-input').value = text;
-  sendMessage();
+function sendMessage() {
+  var inp = document.getElementById('user-input');
+  var btn = document.getElementById('send-btn');
+  var text = inp.value.trim();
+  if (!text || btn.disabled) return;
+  addUser(text); inp.value = ''; inp.blur(); btn.disabled = true;
+  showTyping();
+  var reply = getReply(text);
+  if (reply && typeof reply.then === 'function') {
+    reply.then(function(r){ removeTyping(); addBot(r); btn.disabled = false; inp.focus(); });
+  } else {
+    removeTyping(); addBot(reply); btn.disabled = false; inp.focus();
+  }
 }
 </script>
 </body>
