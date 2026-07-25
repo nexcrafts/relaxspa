@@ -1,520 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-<meta name="theme-color" content="#3D2E1E"/>
-<title>Relax Spa Assistant · Islamabad</title>
-<meta name="description" content="Book VIP massage sessions at Relax Spa, G-9 Markaz Islamabad. Chat with our assistant for packages, pricing, and instant WhatsApp booking."/>
-<meta property="og:title" content="Relax Spa Assistant"/>
-<meta property="og:description" content="VIP Wellness & Massage Center — Islamabad. Book via WhatsApp in one tap."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relax Spa — VIP Massage & Wellness Assistant</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*,::before,::after{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased;background:#FDF8F4}
-#root{min-height:100vh}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes dotBounce{0%,80%,100%{transform:scale(0)}40%{transform:scale(1)}}
-@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-.flex{display:flex}.flex-col{flex-direction:column}.flex-row-reverse{flex-direction:row-reverse}
-.items-start{align-items:flex-start}.items-center{align-items:center}.items-baseline{align-items:baseline}.items-end{align-items:flex-end}
-.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.justify-between{justify-content:space-between}
-.gap-1{gap:4px}.gap-1\.5{gap:6px}.gap-2{gap:8px}.gap-2\.5{gap:10px}.gap-3{gap:12px}.gap-4{gap:16px}
-.flex-1{flex:1 1 0%}.flex-wrap{flex-wrap:wrap}.shrink-0{flex-shrink:0}.min-w-0{min-width:0}
-.w-2{width:8px}.w-2\.5{width:10px}.w-5{width:20px}.w-7{width:28px}.w-8{width:32px}.w-10{width:40px}.w-11{width:44px}
-.h-2{height:8px}.h-2\.5{height:10px}.h-5{height:20px}.h-7{height:28px}.h-8{height:32px}.h-10{height:40px}.h-11{height:44px}
-.p-2\.5{padding:10px}.p-3{padding:12px}.p-3\.5{padding:14px}.p-4{padding:16px}.p-5{padding:20px}.p-6{padding:24px}
-.px-1{padding-left:4px;padding-right:4px}.px-1\.5{padding-left:6px;padding-right:6px}
-.px-2{padding-left:8px;padding-right:8px}.px-2\.5{padding-left:10px;padding-right:10px}
-.px-3{padding-left:12px;padding-right:12px}.px-4{padding-left:16px;padding-right:16px}.px-5{padding-left:20px;padding-right:20px}.px-6{padding-left:24px;padding-right:24px}
-.py-0\.5{padding-top:2px;padding-bottom:2px}.py-1{padding-top:4px;padding-bottom:4px}
-.py-1\.5{padding-top:6px;padding-bottom:6px}.py-2{padding-top:8px;padding-bottom:8px}
-.py-2\.5{padding-top:10px;padding-bottom:10px}.py-3{padding-top:12px;padding-bottom:12px}.py-4{padding-top:16px;padding-bottom:16px}.py-6{padding-top:24px;padding-bottom:24px}
-.pt-3{padding-top:12px}.pt-4{padding-top:16px}.pb-2{padding-bottom:8px}.pb-4{padding-bottom:16px}
-.ml-auto{margin-left:auto}.mr-auto{margin-right:auto}
-.mt-0\.5{margin-top:2px}.mt-1{margin-top:4px}.mt-1\.5{margin-top:6px}
-.mt-2{margin-top:8px}.mt-2\.5{margin-top:10px}.mt-3{margin-top:12px}.mt-4{margin-top:16px}
-.-mx-1{margin-left:-4px;margin-right:-4px}.mb-1{margin-bottom:4px}.mb-2{margin-bottom:8px}.mb-3{margin-bottom:12px}.mb-4{margin-bottom:16px}
-.space-y-1>*+*{margin-top:4px}.space-y-2>*+*{margin-top:8px}.space-y-2\.5>*+*{margin-top:10px}.space-y-3>*+*{margin-top:12px}.space-y-4>*+*{margin-top:16px}
-.text-xs{font-size:12px}.text-sm{font-size:14px}.text-base{font-size:16px}.text-lg{font-size:18px}.text-xl{font-size:20px}.text-2xl{font-size:24px}
-.text-\[9px\]{font-size:9px}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[12px\]{font-size:12px}
-.font-bold{font-weight:700}.font-semibold{font-weight:600}.font-medium{font-weight:500}.font-normal{font-weight:400}
-.text-center{text-align:center}.tracking-tight{letter-spacing:-.01em}
-.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-pre-wrap{white-space:pre-wrap}.whitespace-nowrap{white-space:nowrap}.leading-relaxed{line-height:1.625}
-.relative{position:relative}.sticky{position:sticky}.top-0{top:0}.bottom-0{bottom:0}.-top-0\.5{top:-2px}.-right-0\.5{right:-2px}
-.rounded-full{border-radius:9999px}.rounded-2xl{border-radius:16px}.rounded-xl{border-radius:12px}.rounded-lg{border-radius:8px}.rounded-md{border-radius:6px}
-.border{border:1px solid #E8DDD5}.border-t{border-top:1px solid #E8DDD5}.border-b{border-bottom:1px solid #E8DDD5}
-.bg-white{background:#fff}.bg-\[\#FDF8F4\]{background:#FDF8F4}.bg-\[\#F5EDE5\]{background:#F5EDE5}.bg-\[\#3D2E1E\]{background:#3D2E1E}.bg-\[\#5C4A36\]{background:#5C4A36}
-.text-white{color:#fff}.text-\[\#1A1A1A\]{color:#1A1A1A}.text-\[\#3D2E1E\]{color:#3D2E1E}.text-\[\#5C4A36\]{color:#5C4A36}.text-\[\#8B7355\]{color:#8B7355}.text-\[\#A8937B\]{color:#A8937B}
-.text-\[\#4ADE80\]{color:#4ADE80}.text-\[\#5B21B6\]{color:#5B21B6}.text-\[\#166534\]{color:#166534}.text-\[\#115E59\]{color:#115E59}.text-\[\#DC2626\]{color:#DC2626}.text-\[\#92400E\]{color:#92400E}.text-\[\#B45309\]{color:#B45309}
-.line-through{text-decoration:line-through}.italic{font-style:italic}.uppercase{text-transform:uppercase}
-.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.overflow-x-auto{overflow-x:auto}
-.grid{display:grid}.grid-cols-1{grid-template-columns:1fr}.grid-cols-2{grid-template-columns:repeat(2,1fr)}.grid-cols-3{grid-template-columns:repeat(3,1fr)}
-.max-w-3xl{max-width:768px}.max-w-\[92\%\]{max-width:92%}.max-w-md{max-width:448px}.mx-auto{margin-left:auto;margin-right:auto}.w-full{width:100%}
-.hidden{display:none}.inline-flex{display:inline-flex}.block{display:block}.z-50{z-index:50}
-.transition-all{transition:all .2s}.transition-colors{transition:background-color .15s,color .15s}.transition-opacity{transition:opacity .2s}
-.divide-y>*+*{border-top:1px solid #E8DDD5}
-.shadow-sm{box-shadow:0 1px 2px rgba(61,46,30,.06)}.shadow-md{box-shadow:0 4px 16px rgba(61,46,30,.1)}.shadow-lg{box-shadow:0 8px 24px rgba(61,46,30,.12)}
-.cursor-pointer{cursor:pointer}.scrollbar-thin::-webkit-scrollbar{height:4px}.scrollbar-thin::-webkit-scrollbar-thumb{background:#D5C4B1;border-radius:4px}
-input,select,textarea{outline:0;font-family:inherit}button{cursor:pointer;border:none;font-family:inherit}a{text-decoration:none;color:inherit}
-.delay-0{animation-delay:0ms}.delay-150{animation-delay:150ms}.delay-300{animation-delay:300ms}
-.animate-bounce-dot{animation:dotBounce 1.4s ease-in-out infinite both}
-.animate-spin{animation:spin 1s linear infinite}.animate-pulse-dot{animation:pulse 1.5s ease-in-out infinite}
-.animate-slideUp{animation:slideUp .4s ease-out}
-.animate-shimmer{background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.4) 50%,transparent 100%);background-size:200% 100%;animation:shimmer 2s infinite}
-@media(min-width:640px){.sm\:inline-flex{display:inline-flex}.sm\:grid-cols-2{grid-template-columns:repeat(2,1fr)}.sm\:grid-cols-3{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:480px){.max-w-3xl{padding-left:12px!important;padding-right:12px!important}}
-select{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238B7355'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
-.tab-active{background:#3D2E1E!important;color:#fff!important;box-shadow:0 2px 8px rgba(61,46,30,.2)}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(135deg, #1a1210 0%, #2d1f18 50%, #1a1210 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.widget {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 4px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 640px;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #2d1f18 0%, #5c3d2e 50%, #2d1f18 100%);
+  padding: 20px 20px 16px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 120px; height: 120px;
+  background: rgba(196,164,132,0.08);
+  border-radius: 50%;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px; left: -20px;
+  width: 80px; height: 80px;
+  background: rgba(196,164,132,0.05);
+  border-radius: 50%;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  position: relative; z-index: 1;
+}
+.avatar {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, #c4a484, #e8cfa6);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(196,164,132,0.3);
+}
+.header-info { flex: 1; }
+.clinic-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px; font-weight: 700;
+  color: #fff; line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+.clinic-sub {
+  font-size: 11.5px; color: rgba(255,255,255,0.6);
+  margin-top: 2px; font-weight: 400;
+  letter-spacing: 0.8px; text-transform: uppercase;
+}
+.online-badge {
+  display: flex; align-items: center; gap: 5px;
+  margin-top: 5px;
+}
+.online-dot {
+  width: 7px; height: 7px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74,222,128,0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 4px rgba(74,222,128,0); }
+}
+.online-text { font-size: 11px; color: rgba(255,255,255,0.65); }
+
+.rating-bar {
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 0 0;
+  position: relative; z-index: 1;
+}
+.rating-stars { color: #e8cfa6; font-size: 13px; }
+.rating-text { font-size: 11.5px; color: rgba(255,255,255,0.65); }
+
+/* INFO BAR */
+.info-bar {
+  background: #faf5ed;
+  border-bottom: 1px solid #e8d5b8;
+  padding: 10px 16px;
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+  overflow-x: auto;
+}
+.info-bar::-webkit-scrollbar { display: none; }
+.info-item {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 11px; color: #6b4c3b; font-weight: 500;
+  white-space: nowrap;
+}
+
+/* QUICK BUTTONS */
+.quick-row {
+  padding: 10px 14px;
+  display: flex; gap: 7px; overflow-x: auto;
+  border-bottom: 1px solid #f5f0ea;
+  flex-shrink: 0;
+}
+.quick-row::-webkit-scrollbar { display: none; }
+.qbtn {
+  flex-shrink: 0;
+  padding: 6px 13px;
+  border-radius: 20px;
+  background: #faf5ed;
+  border: 1px solid #e8d5b8;
+  color: #5c3d2e;
+  font-size: 12px; font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
+}
+.qbtn:hover { background: #5c3d2e; color: #fff; border-color: #5c3d2e; }
+
+/* MESSAGES */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fafaf8;
+}
+.messages::-webkit-scrollbar { width: 3px; }
+.messages::-webkit-scrollbar-thumb { background: #e0d5c8; border-radius: 99px; }
+
+.msg { display: flex; gap: 8px; align-items: flex-end; }
+.msg.bot { align-self: flex-start; max-width: 88%; }
+.msg.user { align-self: flex-end; max-width: 80%; flex-direction: row-reverse; }
+
+.msg-icon {
+  width: 30px; height: 30px;
+  background: linear-gradient(135deg, #5c3d2e, #2d1f18);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; flex-shrink: 0;
+}
+
+.msg-content { display: flex; flex-direction: column; gap: 3px; }
+
+.bubble {
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.msg.bot .bubble {
+  background: #fff;
+  color: #1a1a1a;
+  border-radius: 4px 18px 18px 18px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+.msg.user .bubble {
+  background: linear-gradient(135deg, #5c3d2e, #2d1f18);
+  color: #fff;
+  border-radius: 18px 4px 18px 18px;
+}
+.msg-time { font-size: 10.5px; color: #bbb; padding: 0 3px; }
+.msg.user .msg-time { text-align: right; }
+
+/* TYPING */
+.typing-dots { display: flex; gap: 4px; padding: 4px 2px; }
+.typing-dots span {
+  width: 7px; height: 7px;
+  background: #c4a484; border-radius: 50%;
+  animation: dot 1.2s infinite;
+}
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dot {
+  0%,60%,100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-5px); opacity: 1; }
+}
+
+/* OPTIONS */
+.opts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.opt {
+  padding: 6px 13px; border-radius: 20px;
+  border: 1.5px solid #5c3d2e;
+  background: #faf5ed; color: #5c3d2e;
+  font-size: 12px; font-weight: 500;
+  cursor: pointer; transition: all 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+.opt:hover { background: #5c3d2e; color: #fff; }
+
+/* WA BUTTON */
+.wa-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: 10px; padding: 9px 15px;
+  background: #25d366; color: #fff;
+  border-radius: 10px; font-size: 12.5px; font-weight: 600;
+  text-decoration: none; transition: background 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+.wa-btn:hover { background: #1da851; }
+
+/* APPOINTMENT FORM */
+.appt-form {
+  background: #faf5ed;
+  border: 1px solid #e8d5b8;
+  border-radius: 14px;
+  padding: 14px; margin-top: 10px;
+}
+.appt-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; font-weight: 700;
+  color: #5c3d2e; margin-bottom: 10px;
+}
+.appt-inp {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px; margin-bottom: 7px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; color: #1a1a1a;
+  outline: none;
+}
+.appt-inp:focus { border-color: #5c3d2e; }
+.appt-inp::placeholder { color: #bbb; }
+.appt-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #5c3d2e, #2d1f18);
+  color: #fff;
+  border: none; border-radius: 8px; padding: 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 13px;
+  font-weight: 600; cursor: pointer; transition: opacity 0.15s;
+}
+.appt-btn:hover { opacity: 0.9; }
+
+/* REVIEWS */
+.reviews-wrap {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 12px; margin-top: 10px;
+}
+.review-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f0ea;
+}
+.review-item:last-child { border-bottom: none; padding-bottom: 0; }
+.review-top {
+  display: flex; justify-content: space-between;
+  margin-bottom: 3px;
+}
+.review-name { font-size: 12.5px; font-weight: 600; color: #1a1a1a; }
+.review-stars { font-size: 11px; color: #c4a484; }
+.review-text { font-size: 12px; color: #666; line-height: 1.4; }
+
+/* TIMINGS */
+.timings-wrap {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 12px; margin-top: 10px;
+}
+.timing-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid #f5f0ea;
+  font-size: 12px;
+}
+.timing-row:last-child { border-bottom: none; }
+.timing-day { font-weight: 600; color: #1a1a1a; }
+.timing-hrs { color: #666; }
+.timing-peak { color: #c4a484; font-size: 10.5px; font-style: italic; }
+
+/* INPUT */
+.input-area {
+  padding: 10px 14px;
+  background: #fff;
+  border-top: 1px solid #e8d5b8;
+  display: flex; gap: 8px; align-items: center;
+  flex-shrink: 0;
+}
+.text-input {
+  flex: 1;
+  background: #faf5ed;
+  border: 1.5px solid #e8d5b8;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px; color: #1a1a1a;
+  outline: none; transition: border-color 0.15s;
+}
+.text-input:focus { border-color: #5c3d2e; background: #fff; }
+.text-input::placeholder { color: #bbb; }
+.send-btn {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, #5c3d2e, #2d1f18);
+  border: none;
+  border-radius: 12px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 16px; flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+.send-btn:hover { opacity: 0.9; }
+.send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.msg { animation: fadeUp 0.25s ease; }
 </style>
 </head>
-<body><div id="root"></div>
-<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<body>
+<div class="widget">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div class="avatar">🌿</div>
+      <div class="header-info">
+        <div class="clinic-title">Relax Spa</div>
+        <div class="clinic-sub">VIP Wellness & Massage · G-9 Markaz</div>
+        <div class="online-badge">
+          <div class="online-dot"></div>
+          <div class="online-text">AI Assistant · Available now</div>
+        </div>
+      </div>
+    </div>
+    <div class="rating-bar">
+      <span class="rating-stars">★★★★★</span>
+      <span class="rating-text">4.9 · 150+ reviews · G-9 Markaz, Islamabad</span>
+    </div>
+  </div>
+
+  <!-- INFO BAR -->
+  <div class="info-bar">
+    <div class="info-item">🕐 Open · 11 AM–11 PM</div>
+    <div class="info-item">📍 G-9 Markaz, Islamabad</div>
+    <div class="info-item">📞 0300-9050666</div>
+    <div class="info-item">💆 6 Services</div>
+  </div>
+
+  <!-- QUICK BUTTONS -->
+  <div class="quick-row">
+    <div class="qbtn" onclick="quickAsk('Book an appointment')">📅 Book Now</div>
+    <div class="qbtn" onclick="quickAsk('View packages')">🎁 Packages</div>
+    <div class="qbtn" onclick="quickAsk('What services do you offer?')">💆 Services</div>
+    <div class="qbtn" onclick="quickAsk('What are your timings?')">🕐 Timings</div>
+    <div class="qbtn" onclick="quickAsk('Show reviews')">⭐ Reviews</div>
+    <div class="qbtn" onclick="quickAsk('VIP Club membership')">👑 VIP Club</div>
+    <div class="qbtn" onclick="quickAsk('Pricing')">💰 Pricing</div>
+    <div class="qbtn" onclick="quickAsk('Where are you located?')">📍 Location</div>
+  </div>
+
+  <!-- MESSAGES -->
+  <div class="messages" id="messages">
+    <div class="msg bot">
+      <div class="msg-icon">🌿</div>
+      <div class="msg-content">
+        <div class="bubble">
+          Assalam-o-Alaikum! 🌿 Welcome to <strong>Relax Spa</strong> — Islamabad's VIP wellness & massage center.<br><br>
+          I'm your AI assistant. I can help you browse packages, book a session, or answer any questions. How can I help you today? ✨
+          <div class="opts">
+            <div class="opt" onclick="quickAsk('Book an appointment')">📅 Book Appointment</div>
+            <div class="opt" onclick="quickAsk('View packages')">🎁 View Packages</div>
+            <div class="opt" onclick="quickAsk('What services do you offer?')">💆 Services</div>
+            <div class="opt" onclick="quickAsk('Show reviews')">⭐ Reviews</div>
+          </div>
+        </div>
+        <div class="msg-time" id="wt"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INPUT -->
+  <div class="input-area">
+    <input type="text" class="text-input" id="user-input"
+      placeholder="Ask me anything..."
+      onkeydown="if(event.key==='Enter')sendMessage()">
+    <button class="send-btn" id="send-btn" onclick="sendMessage()">➤</button>
+  </div>
+
+</div>
+
 <script>
-
-// === DATA ===
-const A={gold:'#C8A96E',warm:'#D4A056',amber:'#E8A84C',sage:'#8DA691',cream:'#F5EDE5',ink:'#3D2E1E',brown:'#5C4A36',muted:'#8B7355',soft:'#A8937B',rose:'#C97B6B',border:'#E8DDD5'};
-const WA='https://wa.me/923009050666'; const wa=m=>WA+'?text='+encodeURIComponent(m);
-const f=n=>'Rs. '+n.toLocaleString('en-PK');
-
-const PK=[
-  {id:'b',n:'Basic Bliss',no:7500,v:6000,d:'1 Hour',t:'1 Therapist (2 Hands)',tag:null,a:A.gold},
-  {id:'s',n:'Standard Serenity',no:11500,v:9500,d:'1h 20 Mins',t:'1 Therapist (2 Hands)',tag:null,a:A.warm},
-  {id:'p',n:'Premium Harmony',no:15500,v:13000,d:'2 Hours',t:'2 Therapists (4 Hands)',tag:'Most Popular',a:A.amber},
-  {id:'u',n:'Ultimate Indulgence',no:22500,v:19000,d:'3 Hours',t:'3 Therapists (6 Hands)',tag:'Top Tier',a:A.rose},
-];
-const SV=[
-  {id:'sw',n:'Swedish Massage',sb:'Basic Relax Package',p6:5000,p9:7500,ds:'Instant relief from anxiety, better circulation and deeper sleep.',a:A.gold},
-  {id:'th',n:'Thai Massage',sb:'Executive Stress Buster',p6:6000,p9:8500,ds:'Yogic stretching + pressure points to unblock joints & muscles.',a:A.warm},
-  {id:'dp',n:'Deep Tissue Massage',sb:'Athletic Muscle Healing',p6:7000,p9:10000,ds:'Targeted deep pressure to release stubborn neck, shoulder & back knots.',a:A.rose},
-  {id:'ar',n:'Aroma Therapy Massage',sb:'Royal Candlelight Ritual',p6:7000,p9:9500,ds:'Imported essential oils + candlelight ambience for mental calm.',a:A.amber},
-  {id:'bm',n:'Bamboo Massage Special',sb:'The Relax Signature Bamboo',p6:8000,p9:11000,ds:'Warm bamboo rollers for deep sub-dermal pressure and muscle release.',a:A.sage},
-  {id:'b2',n:'B2B Massage Special',sb:'Executive Relaxation',p6:10000,p9:14000,ds:'Full-body sensory alignment with candlelight royal ambience.',a:A.amber},
-];
-
-const RV=[
-  {n:'Ahmed K.',r:5,t:'Islamabad',d:'2 weeks ago',txt:'Best massage experience in Islamabad. The Premium Harmony package with 4 hands was incredible. Very professional staff and clean environment.'},
-  {n:'Sarah M.',r:5,t:'Islamabad',d:'5 days ago',txt:'The Deep Tissue massage fixed my chronic back pain. After 3 sessions I feel like a new person. Highly recommend!'},
-  {n:'Usman R.',r:5,t:'Rawalpindi',d:'1 week ago',txt:'VIP treatment from start to finish. Welcome drink, amazing Swedish massage, and the herbal tea afterwards was perfect. Worth every rupee.'},
-  {n:'Faisal L.',r:4,t:'Lahore',d:'3 weeks ago',txt:'Visited during a business trip. The ambiance is 5-star quality. Aroma Therapy was divine. Booking via WhatsApp was super easy.'},
-  {n:'Zainab A.',r:5,t:'Islamabad',d:'1 month ago',txt:'As a woman I was initially hesitant but the privacy and security here is top notch. The Bamboo Massage is their hidden gem. Love it!'},
-  {n:'Kamran S.',r:5,t:'Islamabad',d:'2 weeks ago',txt:'VIP Club membership is totally worth it. Already had 5 sessions and got my 6th one free. Loyalty program actually delivers.'},
-];
-
-const TM=[
-  {day:'Mon-Fri',hours:'11:00 AM — 11:00 PM',peak:'3:00 PM — 9:00 PM',note:'Weekday special rates'},
-  {day:'Saturday',hours:'11:00 AM — 11:00 PM',peak:'12:00 PM — 10:00 PM',note:'Most popular day'},
-  {day:'Sunday',hours:'12:00 PM — 10:00 PM',peak:'1:00 PM — 8:00 PM',note:'Limited slots'},
-];
-
-const SLOTS=['11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM','6:00 PM','7:00 PM','8:00 PM','9:00 PM','10:00 PM'];
-
-const CH=[
-  {l:'Packages',i:'packages'},{l:'Services',i:'services'},{l:'Pricing',i:'pricing'},
-  {l:'Book Now',i:'book'},{l:'Reviews',i:'reviews'},{l:'Timings',i:'timings'},
-  {l:'VIP Club',i:'vip'},{l:'FAQ',i:'faq'},
-];
-
-const CA=[{l:'Packages',i:'packages'},{l:'Services',i:'services'},{l:'Book Now',i:'book'},{l:'Reviews',i:'reviews'}];
-
-const FAQS=[
-  {q:'Is privacy & security ensured?',a:'Absolutely \u2014 privacy & security are our top priority. The environment is 100% executive, calm and family-protocol secure.',ic:'Star'},
-  {q:'Do I need to pre-book?',a:'Yes \u2014 VIP protocol is pre-booking only, via WhatsApp or our booking form. This preserves slots and saves your time.',ic:'Cal'},
-  {q:'Is parking & shower available?',a:'Yes \u2014 free, secure parking at G-9 Markaz. A luxury hot VIP shower is included FREE after every session.',ic:'Pin'},
-  {q:'What is included in every session?',a:'Free welcome drink on arrival, herbal green tea after the massage, and a hot luxury shower \u2014 always included.',ic:'Gift'},
-];
-
-// === ICONS ===
-const {useState,useRef,useEffect,useMemo,createElement:h,Fragment:Fr}=React;
-const SVG=p=>h('svg',{xmlns:'http://www.w3.org/2000/svg',width:p.s||24,height:p.s||24,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:2,strokeLinecap:'round',strokeLinejoin:'round',className:p.cl||'',style:p.st||{},...(p.x||{})},(Array.isArray(p.d)?p.d:[p.d]).map((d,i)=>h('path',{key:i,d})));
-const I={
-Send:p=>h(SVG,{...p,d:['M22 2 11 13','m22 2-7 20-4-9-9-4Z']}),
-Sparkles:p=>h(SVG,{...p,d:'M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.71a1 1 0 0 0 .876.745l5.742.578a1 1 0 0 1 .561 1.727l-4.32 3.869a1 1 0 0 0-.336.938l1.268 5.636a1 1 0 0 1-1.476 1.066L12 20.16l-5.349 3.923a1 1 0 0 1-1.476-1.066l1.268-5.636a1 1 0 0 0-.336-.938l-4.32-3.869a1 1 0 0 1 .561-1.727l5.742-.578a1 1 0 0 0 .876-.745l1.051-5.71Z'}),
-Msg:p=>h(SVG,{...p,d:'M7.9 20A9 9 0 1 0 4 16.1L2 22Z'}),
-Clock:p=>h(SVG,{...p,d:['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z','M12 6v6l4 2']}),
-Pin:p=>h(SVG,{...p,d:['M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0Z','M12 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z']}),
-Phone:p=>h(SVG,{...p,d:'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z'}),
-Mail:p=>h(SVG,{...p,d:['M22 6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6Z','M22 7 12 13 2 7']}),
-Cal:p=>h(SVG,{...p,d:['M16 2v4','M8 2v4','M3 10h18','M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6Z']}),
-Tag:p=>h(SVG,{...p,d:'M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42Z'}),
-User:p=>h(SVG,{...p,d:['M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2','M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z']}),
-Bot:p=>h(SVG,{...p,d:['M12 8V4H8','M4 8a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H4Z','M2 14h2','M20 14h2','M15 13v2','M9 13v2']}),
-Loader:p=>h(SVG,{...p,d:'M21 12a9 9 0 1 1-6.219-8.56'}),
-Star:p=>h(SVG,{...p,d:'M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z'}),
-StarFill:p=>h(SVG,{...p,d:'M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z',fill:'currentColor'}),
-Heart:p=>h(SVG,{...p,d:'M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'}),
-Gift:p=>h(SVG,{...p,d:['M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7','M12 8v13','M3 8h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z','M7.5 8a2.5 2.5 0 0 1 0-5C4.802 3 7 6 12 8','M16.5 8a2.5 2.5 0 0 0 0-5C19.198 3 17 6 12 8']}),
-Check:p=>h(SVG,{...p,d:'M20 6 9 17l-5-5'}),
-Alert:p=>h(SVG,{...p,d:['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z','M12 8v4','M12 16h.01']}),
-ExtLink:p=>h(SVG,{...p,d:['M15 3h6v6','M10 14 21 3','M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6']}),
+const C = {
+  name: "Relax Spa",
+  location: "G-9 Markaz, Islamabad, 44000, Pakistan",
+  timings: "11 AM – 11 PM, 7 days a week",
+  phone: "0300-9050666",
+  whatsapp: "923009050666",
+  services: [
+    "Swedish Massage — Basic Relax (60 min: Rs. 5,000 / 90 min: Rs. 7,500)",
+    "Thai Massage — Executive Stress Buster (60 min: Rs. 6,000 / 90 min: Rs. 8,500)",
+    "Deep Tissue Massage — Athletic Muscle Healing (60 min: Rs. 7,000 / 90 min: Rs. 10,000)",
+    "Aroma Therapy Massage — Royal Candlelight Ritual (60 min: Rs. 7,000 / 90 min: Rs. 9,500)",
+    "Bamboo Massage Special — The Relax Signature (60 min: Rs. 8,000 / 90 min: Rs. 11,000)",
+    "B2B Massage Special — Executive Relaxation (60 min: Rs. 10,000 / 90 min: Rs. 14,000)"
+  ],
+  packages: [
+    "Basic Bliss — 1 Hour, 1 Therapist (2 Hands) — Normal: Rs. 7,500 / VIP: Rs. 6,000",
+    "Standard Serenity — 1h 20 Mins, 1 Therapist (2 Hands) — Normal: Rs. 11,500 / VIP: Rs. 9,500",
+    "Premium Harmony — 2 Hours, 2 Therapists (4 Hands) — Normal: Rs. 15,500 / VIP: Rs. 13,000",
+    "Ultimate Indulgence — 3 Hours, 3 Therapists (6 Hands) — Normal: Rs. 22,500 / VIP: Rs. 19,000"
+  ],
+  serviceNames: [
+    "Swedish Massage", "Thai Massage", "Deep Tissue Massage", "Aroma Therapy Massage", "Bamboo Massage Special", "B2B Massage Special"
+  ],
+  packageNames: [
+    "Basic Bliss Package", "Standard Serenity Package", "Premium Harmony Package", "Ultimate Indulgence Package"
+  ],
+  reviews: [
+    { name: "Ahmed K.", stars: "★★★★★", text: "Best massage experience in Islamabad. The Premium Harmony package with 4 hands was incredible. Very professional staff and clean environment." },
+    { name: "Sarah M.", stars: "★★★★★", text: "Deep Tissue massage fixed my chronic back pain. After 3 sessions I feel like a new person. Highly recommend!" },
+    { name: "Usman R.", stars: "★★★★★", text: "VIP treatment from start to finish. Welcome drink, amazing Swedish massage, and herbal tea afterwards was perfect." },
+    { name: "Faisal L.", stars: "★★★★☆", text: "Visited during a business trip. The ambiance is 5-star quality. Aroma Therapy was divine. Booking via WhatsApp was super easy." },
+    { name: "Zainab A.", stars: "★★★★★", text: "As a woman I was initially hesitant but the privacy and security here is top notch. The Bamboo Massage is their hidden gem!" },
+    { name: "Kamran S.", stars: "★★★★★", text: "VIP Club membership is totally worth it. Had 5 sessions and got my 6th one free. Loyalty program actually delivers." }
+  ],
+  timingDetails: [
+    { day: "Monday – Friday", hours: "11:00 AM – 11:00 PM", peak: "Peak: 3 PM – 9 PM" },
+    { day: "Saturday", hours: "11:00 AM – 11:00 PM", peak: "Peak: 12 PM – 10 PM" },
+    { day: "Sunday", hours: "12:00 PM – 10:00 PM", peak: "Peak: 1 PM – 8 PM" }
+  ]
 };
 
-// === INTENT ROUTER ===
-function rt(t){var q=t.toLowerCase();
-if(/package|deal|bundle|combo/.test(q))return'packages';
-if(/service|menu|type of massage|kind|which massage/.test(q))return'services';
-if(/price|cost|rate|fee|kitna|kitne|how much|charges/.test(q))return'pricing';
-if(/time|hour|open|close|schedule|timing|slot/.test(q))return'timings';
-if(/location|address|where|map|reach|parking/.test(q))return'location';
-if(/contact|phone|call|whatsapp|email|number/.test(q))return'contact';
-if(/book|reserve|appointment|slot|form|schedule/.test(q))return'book';
-if(/review|testimonial|feedback|rating|experience/.test(q))return'reviews';
-if(/vip|member|club|loyalty|cashback|wallet|discount|voucher|offer/.test(q))return'vip';
-if(/faq|question|privacy|security|safe|shower|drink/.test(q))return'faq';
-if(/swedish/.test(q))return'sv:sw';if(/thai/.test(q))return'sv:th';
-if(/deep tissue|knot|back pain|neck pain|athletic/.test(q))return'sv:dp';
-if(/aroma|essential oil|candle/.test(q))return'sv:ar';
-if(/bamboo|signature/.test(q))return'sv:bm';
-if(/b2b/.test(q))return'sv:b2';
-if(/basic/.test(q))return'pk:b';if(/standard|serenity/.test(q))return'pk:s';
-if(/premium|harmony|popular/.test(q))return'pk:p';
-if(/ultimate|indulg|luxury|best/.test(q))return'pk:u';
-if(/hi|hello|hey|salam|assalam/.test(q))return'greet';
-if(/thank|thanks|shukriya/.test(q))return'thanks';
-return'fallback';}
+const SYSTEM = "You are a warm, professional AI receptionist for " + C.name + ", a VIP wellness & massage center located at " + C.location + ". Timings: " + C.timings + ". Phone: " + C.phone + ". Services: Swedish Massage, Thai Massage, Deep Tissue Massage, Aroma Therapy Massage, Bamboo Massage Special, B2B Massage Special. Packages: Basic Bliss (Rs. 7,500), Standard Serenity (Rs. 11,500), Premium Harmony (Rs. 15,500), Ultimate Indulgence (Rs. 22,500). Every session includes welcome drink, herbal green tea & hot shower. VIP members get discounted pricing & loyalty rewards. Keep replies short (2-3 sentences max), warm, elegant and professional. Respond in the same language as the customer (Urdu or English).";
 
-function rp(i){
-if(i==='greet')return{t:"Assalam-o-Alaikum! \u2728 Welcome to **Relax Spa** \u2014 Islamabad's premier VIP wellness & massage center. How can I assist you today?",c:CH};
-if(i==='thanks')return{t:"You're most welcome \ud83c\udf38 Ready whenever you need a session booked.",c:[{l:'Book Now',i:'book'},{l:'View Reviews',i:'reviews'}]};
-if(i==='packages')return{t:'Our **VIP Spa Packages** \u2014 each includes welcome drink, herbal green tea & hot shower:',cd:{tp:'packages',it:PK},c:CA};
-if(i==='services')return{t:'Our **VIP Massage Menu** \u2014 every session includes welcome drink + herbal tea + hot shower:',cd:{tp:'services',it:SV},c:CA};
-if(i==='pricing')return{t:'Complete pricing at a glance \u2014 VIP members save on every package:',cd:{tp:'pricing'},c:CA};
-if(i==='timings')return{t:'\ud83d\udd52 **Salon Hours & Session Timings**',cd:{tp:'timings'},c:[{l:'Book a Slot',i:'book'},{l:'Contact Us',i:'contact'}]};
-if(i==='location')return{t:'\ud83d\udccd **G-9 Markaz, Islamabad, 44000** \u2014 private, secure & peaceful luxury environment with free parking.',cd:{tp:'contact'},c:[{l:'Book Now',i:'book'},{l:'Timings',i:'timings'}]};
-if(i==='contact')return{t:"Here's how to reach us \u2014 WhatsApp is fastest:",cd:{tp:'contact'},c:[{l:'Book Now',i:'book'}]};
-if(i==='book')return{t:'\ud83d\udcc5 Booking is quick & private. Choose to fill our **appointment form** or jump to **WhatsApp** instantly:',cd:{tp:'book'},c:CA};
-if(i==='reviews')return{t:'\u2b50 **What Our VIP Clients Say** \u2014 Verified reviews from real customers:',cd:{tp:'reviews',it:RV},c:[{l:'Book Now',i:'book'},{l:'View Packages',i:'packages'}]};
-if(i==='vip')return{t:'\ud83c\udf1f **VIP Elite Club Membership** perks:\n\u2022 Instant **Rs. 1,500** free cashback on sign-up\n\u2022 Member pricing on every package (save up to Rs. 3,500)\n\u2022 **Loyalty tracker** \u2014 every 5th session FREE or 50% off\n\u2022 Priority slot booking',c:[{l:'Book Now',i:'book'},{l:'View Packages',i:'packages'}]};
-if(i==='faq')return{t:'**Frequently Asked Questions**',cd:{tp:'faq'},c:CA};
-if(i.indexOf('sv:')===0){var s=SV.find(function(x){return x.id===i.split(':')[1]});if(s)return{t:'**'+s.n+'** \u2014 _'+s.sb+'_\n\n'+s.ds,cd:{tp:'sv-detail',it:s},c:[{l:'Book This',i:'bksv:'+s.id},{l:'Other Services',i:'services'}]}}
-if(i.indexOf('pk:')===0){var p=PK.find(function(x){return x.id===i.split(':')[1]});if(p)return{t:'**'+p.n+' Package**',cd:{tp:'pk-detail',it:p},c:[{l:'Book This',i:'bkpk:'+p.id},{l:'Other Packages',i:'packages'}]}}
-return{t:'I can help with **packages, services, pricing, timings, booking, reviews** and more. What would you like to know?',c:CH};}
+let history = [];
 
-// === HELPER: Bold text ===
-function bt(t){
-  var parts=String(t).split(/(\*\*[^*]+\*\*|_[^_]+_)/g);
-  return parts.map(function(p,i){
-    if(p.indexOf('**')===0)return h('strong',{key:i,className:'font-semibold',style:{color:'#3D2E1E'}},p.slice(2,-2));
-    if(p.indexOf('_')===0&&p.lastIndexOf('_')===p.length-1)return h('em',{key:i,className:'italic',style:{color:'#8B7355'}},p.slice(1,-1));
-    return h('span',{key:i},p);
-  });
-}
-function TB(p){return h('div',{className:'text-sm',style:{color:'#3D2E1E',lineHeight:1.625,whiteSpace:'pre-wrap'}},String(p.t).split('\n').map(function(l,i){return h('div',{key:i},bt(l))}))}
+document.getElementById('wt').textContent = new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
 
-// === REVIEWS CARD ===
-function RVC(p){
-  return h('div',{className:'space-y-3',style:{marginTop:12}},
-    h('div',{className:'flex items-center gap-2 mb-2',style:{marginTop:4}},
-      h('div',{className:'flex'},[1,2,3,4,5].map(function(i){return h(I.StarFill,{key:i,s:12,style:{color:i<=4.8?'#D4A056':'#D5C4B1'}});})),
-      h('span',{className:'text-xs font-semibold',style:{color:'#8B7355'}},'4.9 \u00b7 '+p.it.length+' reviews')),
-    p.it.map(function(r,i){return h('div',{key:i,className:'bg-white rounded-2xl border p-4 transition-all',style:{borderColor:'#E8DDD5'},
-      onMouseEnter:function(e){e.currentTarget.style.boxShadow='0 4px 16px rgba(61,46,30,.1)';e.currentTarget.style.transform='translateY(-2px)'},
-      onMouseLeave:function(e){e.currentTarget.style.boxShadow='';e.currentTarget.style.transform=''}},
-      h('div',{className:'flex items-center justify-between mb-2'},
-        h('div',{className:'flex items-center gap-2'},
-          h('div',{className:'w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white',style:{backgroundColor:'#3D2E1E'}},r.n.charAt(0)),
-          h('div',null,
-            h('div',{className:'text-sm font-semibold',style:{color:'#3D2E1E'}},r.n),
-            h('div',{className:'text-[10px]',style:{color:'#A8937B'}},r.t+' \u00b7 '+r.d))),
-        h('div',{className:'flex gap-0.5'},[1,2,3,4,5].map(function(j){return h(I.StarFill,{key:j,s:10,style:{color:j<=r.r?'#D4A056':'#D5C4B1'}})}))),
-      h('p',{className:'text-[12px] leading-relaxed italic',style:{color:'#5C4A36'}},'"'+r.txt+'"'))}));
+function t() { return new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'}); }
+
+function addBot(html) {
+  const el = document.getElementById('messages');
+  const d = document.createElement('div');
+  d.className = 'msg bot';
+  d.innerHTML = '<div class="msg-icon">🌿</div><div class="msg-content"><div class="bubble">'+html+'</div><div class="msg-time">'+t()+'</div></div>';
+  el.appendChild(d); el.scrollTop = el.scrollHeight;
 }
 
-// === TIMINGS CARD ===
-function TMC(){
-  return h('div',{style:{marginTop:12}},
-    h('div',{className:'bg-white rounded-2xl border overflow-hidden divide-y',style:{borderColor:'#E8DDD5'}},
-      TM.map(function(t,i){return h('div',{key:i,className:'px-4 py-3 flex items-center gap-3 hover:bg-[#FDF8F4] transition-colors'},
-        h('div',{className:'w-10 h-10 rounded-xl flex items-center justify-center',style:{backgroundColor:i===0?'#F5EDE5':i===1?'#F5EDE5':'#F5EDE5'}},
-          h(I.Clock,{s:14,style:{color:'#5C4A36'}})),
-        h('div',{className:'flex-1'},
-          h('div',{className:'text-sm font-semibold',style:{color:'#3D2E1E'}},t.day),
-          h('div',{className:'text-[11px]',style:{color:'#8B7355',marginTop:2}},
-            'Peak hours: '+t.peak+' \u00b7 '+t.note)),
-        h('div',{className:'text-right'},
-          h('div',{className:'text-sm font-bold',style:{color:'#3D2E1E'}},t.hours),
-          h('span',{className:'text-[9px] px-1.5 py-0.5 rounded-full font-semibold',style:{backgroundColor:A.cream,color:'#5C4A36',border:'1px solid '+A.border}},'Open')));}),
-      h('div',{className:'px-4 py-3 flex items-center justify-between',style:{backgroundColor:'#FDF8F4'}},
-        h('span',{className:'text-xs font-semibold',style:{color:'#5C4A36'}},'\ud83d\udcc6 Pre-booking recommended'),
-        h('span',{className:'text-[10px]',style:{color:'#A8937B'}},'Sessions start every hour')))),
-    h('div',{className:'mt-3 bg-white rounded-2xl border p-4',style:{borderColor:'#E8DDD5'}},
-      h('div',{className:'text-xs font-semibold mb-3',style:{color:'#3D2E1E'}},'Available Time Slots'),
-      h('div',{className:'flex flex-wrap gap-1.5'},SLOTS.map(function(s,i){return h('span',{key:i,className:'text-[11px] px-2.5 py-1.5 rounded-full font-medium transition-all',style:{backgroundColor:i<2||i>9?'#F5EDE5':i<6?'#FDF8F4':'#F5EDE5',color:i<2||i>9?'#A8937B':'#3D2E1E',border:'1px solid '+A.border,cursor:'default'}},s)}))));
+function addUser(text) {
+  const el = document.getElementById('messages');
+  const d = document.createElement('div');
+  d.className = 'msg user';
+  d.innerHTML = '<div class="msg-content"><div class="bubble">'+text+'</div><div class="msg-time">'+t()+'</div></div>';
+  el.appendChild(d); el.scrollTop = el.scrollHeight;
 }
 
-// === BOOKING FORM CARD ===
-function BKF(p){
-  var _n=useState(''),name=_n[0],setName=_n[1];
-  var _ph=useState(''),phone=_ph[0],setPhone=_ph[1];
-  var _sv=useState(''),svc=_sv[0],setSvc=_sv[1];
-  var _dt=useState(''),date=_dt[0],setDate=_dt[1];
-  var _sl=useState(''),slot=_sl[0],setSlot=_sl[1];
-  var _st=useState('idle'),status=_st[0],setStatus=_st[1];
-  var _er=useState(''),err=_er[0],setErr=_er[1];
+function showTyping() {
+  const el = document.getElementById('messages');
+  const d = document.createElement('div');
+  d.className = 'msg bot'; d.id = 'typing';
+  d.innerHTML = '<div class="msg-icon">🌿</div><div class="msg-content"><div class="bubble"><div class="typing-dots"><span></span><span></span><span></span></div></div></div>';
+  el.appendChild(d); el.scrollTop = el.scrollHeight;
+}
 
-  var today=new Date().toISOString().slice(0,10);
+function removeTyping() { const t=document.getElementById('typing'); if(t) t.remove(); }
 
-  function submit(e){e.preventDefault();
-    if(!name.trim()){setErr('Please enter your full name');return}
-    if(!phone.trim()){setErr('Please enter your mobile number');return}
-    if(!svc){setErr('Please select a service');return}
-    if(!date){setErr('Please select a date');return}
-    if(!slot){setErr('Please select a time slot');return}
-    setErr('');setStatus('sending');
-    var msg='Assalam-o-Alaikum Relax Spa,\\n\\nI want to book an appointment:\\n\u2502 Name: '+name.trim()+'\\n\u2502 Phone: '+phone.trim()+'\\n\u2502 Service: '+svc+'\\n\u2502 Date: '+date+'\\n\u2502 Time: '+slot+'\\n\\nPlease confirm my slot.';
-    setTimeout(function(){setStatus('done');window.open(wa(msg),'_blank')},600);
+function waBtn(msg) {
+  return '<br><a class="wa-btn" href="https://wa.me/'+C.whatsapp+'?text='+encodeURIComponent(msg)+'" target="_blank">💬 Chat on WhatsApp</a>';
+}
+
+function apptForm() {
+  return '<div class="appt-form">'+
+    '<div class="appt-title">📅 Book Your VIP Session</div>'+
+    '<input class="appt-inp" id="fn" placeholder="Your full name">'+
+    '<input class="appt-inp" id="fp" placeholder="Phone number">'+
+    '<select class="appt-inp" id="fs"><option value="">Select service or package</option>'+
+    C.serviceNames.map(function(s){return '<option>'+s+'</option>';}).join('')+
+    C.packageNames.map(function(p){return '<option>'+p+'</option>';}).join('')+
+    '</select>'+
+    '<input class="appt-inp" id="fd" placeholder="Preferred date & time">'+
+    '<button class="appt-btn" onclick="submitAppt()">✓ Confirm via WhatsApp</button>'+
+    '<div style="font-size:10px;color:#999;margin-top:6px">Every session includes: welcome drink 🍵 + herbal green tea + hot shower 🚿</div>'+
+    '</div>';
+}
+
+function reviewsCard() {
+  return '<div class="reviews-wrap">'+
+    '<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">'+
+    '<span style="font-size:13px;font-weight:700;color:#1a1a1a">⭐⭐⭐⭐⭐ 4.9 · 150+ Reviews</span>'+
+    '</div>'+
+    C.reviews.map(function(r){return '<div class="review-item"><div class="review-top"><span class="review-name">'+r.name+'</span><span class="review-stars">'+r.stars+'</span></div><div class="review-text">'+r.text+'</div></div>';}).join('')+'</div>';
+}
+
+function timingsCard() {
+  return '<div class="timings-wrap">'+
+    '<div style="font-weight:700;font-size:13px;color:#1a1a1a;margin-bottom:8px">🕐 Salon Hours</div>'+
+    C.timingDetails.map(function(tm){return '<div class="timing-row"><span class="timing-day">'+tm.day+'</span><span class="timing-hrs">'+tm.hours+'</span><span class="timing-peak">'+tm.peak+'</span></div>';}).join('')+
+    '<div style="margin-top:8px;font-size:11px;color:#c4a484;">✦ Pre-booking only · Free secure parking · VIP protocol</div>'+
+    '</div>';
+}
+
+function submitAppt() {
+  const n=document.getElementById('fn')?.value||'';
+  const p=document.getElementById('fp')?.value||'';
+  const s=document.getElementById('fs')?.value||'General';
+  const d=document.getElementById('fd')?.value||'Flexible';
+  if(!n||!p){alert('Please enter your name and phone number!');return;}
+  const msg='Assalam-o-Alaikum Relax Spa!\n\n📋 VIP Booking Request:\n👤 Name: '+n+'\n📞 Phone: '+p+'\n💆 Service/Package: '+s+'\n📅 Date/Time: '+d+'\n\nPlease confirm my slot. JazakAllah!';
+  window.open('https://wa.me/'+C.whatsapp+'?text='+encodeURIComponent(msg),'_blank');
+}
+
+async function getReply(msg) {
+  const m = msg.toLowerCase();
+  if (['book','appointment','schedule','visit','appoint','slot'].some(function(k){return m.includes(k)}))
+    return 'Please fill in your details below and we\'ll confirm your VIP session right away! 🌿'+apptForm();
+  if (['review','feedback','rating','customer','testimonial'].some(function(k){return m.includes(k)}))
+    return 'Here\'s what our VIP clients say! ⭐'+reviewsCard();
+  if (['package','deal','bundle','combo','basic','standard','premium','ultimate'].some(function(k){return m.includes(k)}))
+    return '🎁 Here are our <strong>VIP Spa Packages</strong> — each includes welcome drink, herbal green tea & hot shower:<br><br>'+C.packages.map(function(p){return '✅ <strong>'+p+'</strong>';}).join('<br>')+'<br><br>💎 <em>VIP members save Rs. 1,500 – 3,500 on every package!</em>'+waBtn('Assalam-o-Alaikum Relax Spa, main VIP package book karwana chahta hoon.');
+  if (['location','address','where','kahan','direction','map'].some(function(k){return m.includes(k)}))
+    return '📍 We are at <strong>G-9 Markaz, Islamabad, 44000</strong> — private, secure, peaceful luxury environment with free parking. 🚗'+waBtn('Assalam-o-Alaikum! Please share exact location of Relax Spa G-9 Markaz.');
+  if (['vip','member','club','loyalty','cashback','wallet','discount'].some(function(k){return m.includes(k)}))
+    return '👑 <strong>VIP Elite Club Membership</strong><br><br>🎁 Instant <strong>Rs. 1,500</strong> free cashback on sign-up<br>💰 Member pricing — save up to <strong>Rs. 3,500</strong> per package<br>⭐ Loyalty tracker — every <strong>5th session FREE</strong> or 50% off<br>🔒 Priority slot booking'+waBtn('Assalam-o-Alaikum Relax Spa, mujhe VIP Club membership ke baare mein detail chahiye.');
+
+  history.push({role:'user',content:msg});
+  try {
+    const res = await fetch("https://YOUR-VERCEL-URL.vercel.app/api/chat",{
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({system:SYSTEM, messages:history})
+    });
+    const data = await res.json();
+    const reply = data.reply || "Please contact us on WhatsApp for assistance! 🌿";
+    history.push({role:'assistant',content:reply});
+    const needsWA = ['fee','cost','price','rate','kitna','charge'].some(function(k){return m.includes(k)});
+    return reply.replace(/\n/g,'<br>') + (needsWA ? waBtn('Assalam-o-Alaikum! Please share pricing details for Relax Spa services.') : '');
+  } catch(e) {
+    if (['service','treatment','offer','kya','type','massage','kind'].some(function(k){return m.includes(k)}))
+      return '💆 We offer 6 premium massage services at Relax Spa:<br><br>'+C.services.map(function(s){return '✅ <strong>'+s+'</strong>';}).join('<br>')+'<br><br>✨ <em>Every session includes: welcome drink + herbal green tea + hot shower</em><div class="opts"><div class="opt" onclick="quickAsk(\'Book an appointment\')">📅 Book Now</div><div class="opt" onclick="quickAsk(\'View packages\')">🎁 View Packages</div></div>';
+    if (['time','hour','open','timing','when','kab','waqt','close','ghanta'].some(function(k){return m.includes(k)}))
+      return '🕐 We are open <strong>11 AM – 11 PM, 7 days a week</strong>.<br><br>Peak hours: 3 PM – 9 PM. We recommend pre-booking to secure your VIP slot! 🌿'+timingsCard();
+    if (['fee','cost','price','rate','kitna','charge','pricing'].some(function(k){return m.includes(k)}))
+      return '💰 Our services start from <strong>Rs. 5,000 (60 min)</strong> and packages from <strong>Rs. 7,500</strong>. VIP members get discounted rates on every package!'+waBtn('Assalam-o-Alaikum! Please share full pricing details for Relax Spa.');
+    if (['faq','question','privacy','security','safe','shower','drink','include'].some(function(k){return m.includes(k)}))
+      return '📋 <strong>Quick Info:</strong><br><br>✅ 100% private & secure VIP environment<br>✅ Pre-booking only<br>✅ Free secure parking 🚗<br>✅ Free welcome drink 🍵 + herbal tea ☕<br>✅ Luxury hot shower after every session 🚿<br>✅ 11 AM – 11 PM, 7 days a week'+waBtn('Assalam-o-Alaikum Relax Spa, mujhe appointment book karwana hai.');
+    if (/hi|hello|hey|salam|assalam|start/.test(m))
+      return 'Assalam-o-Alaikum! 🌿 Welcome to <strong>Relax Spa</strong> — Islamabad\'s VIP wellness center. How can I assist you today? I can help with packages, services, pricing, booking, and more!'+waBtn('Assalam-o-Alaikum Relax Spa, mujhe VIP session book karwana hai.');
+    if (/thank|thanks|shukriya/.test(m))
+      return 'You\'re most welcome! 🌸 Ready whenever you need a session booked. JazakAllah!';
+    return 'Thank you for reaching out to Relax Spa! I can help with packages, services, pricing, timings, location, or booking. What would you like to know? 🌿'+waBtn('Assalam-o-Alaikum Relax Spa, mujhe '+msg+' ke baare mein detail chahiye.');
   }
-
-  if(status==='done')return h('div',{className:'bg-white rounded-2xl border p-6 text-center animate-slideUp',style:{marginTop:12,borderColor:'#E8DDD5'}},
-    h('div',{className:'w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-3',style:{backgroundColor:'#8DA69126'}},h(I.Check,{s:22,style:{color:'#8DA691'}})),
-    h('div',{className:'text-base font-bold',style:{color:'#3D2E1E'}},'Appointment Request Sent!'),
-    h('p',{className:'text-sm mt-1',style:{color:'#8B7355'}},'Opening WhatsApp with your booking details. Relax Spa team will confirm your slot shortly.'),
-    h('button',{onClick:function(){setName('');setPhone('');setSvc('');setDate('');setSlot('');setStatus('idle')},className:'mt-4 px-5 py-2 rounded-full text-sm font-semibold transition-all',style:{backgroundColor:'#3D2E1E',color:'#fff'},onMouseEnter:function(e){e.currentTarget.style.backgroundColor='#5C4A36'},onMouseLeave:function(e){e.currentTarget.style.backgroundColor='#3D2E1E'}},'Book Another Session'));
-
-  return h('form',{onSubmit:submit,className:'bg-white rounded-2xl border p-5 space-y-3 animate-slideUp',style:{marginTop:12,borderColor:'#E8DDD5'}},
-    h('div',{className:'text-sm font-bold mb-1',style:{color:'#3D2E1E'}},'\ud83d\udccb Book Your Appointment'),
-    h('div',null,
-      h('label',{className:'text-[11px] font-semibold mb-1 block',style:{color:'#5C4A36'}},'Full Name'),
-      h('input',{value:name,onChange:function(e){setName(e.target.value)},placeholder:'Enter your full name',className:'w-full px-4 py-2.5 text-sm rounded-xl border',style:{borderColor:'#E8DDD5',backgroundColor:'#FDF8F4',color:'#3D2E1E'},onFocus:function(e){e.target.style.borderColor='#5C4A36';e.target.style.boxShadow='0 0 0 3px rgba(61,46,30,.08)'},onBlur:function(e){e.target.style.borderColor='#E8DDD5';e.target.style.boxShadow='none'}})),
-    h('div',null,
-      h('label',{className:'text-[11px] font-semibold mb-1 block',style:{color:'#5C4A36'}},'Mobile Number'),
-      h('input',{value:phone,onChange:function(e){setPhone(e.target.value)},placeholder:'03XX-XXXXXXX',type:'tel',className:'w-full px-4 py-2.5 text-sm rounded-xl border',style:{borderColor:'#E8DDD5',backgroundColor:'#FDF8F4',color:'#3D2E1E'},onFocus:function(e){e.target.style.borderColor='#5C4A36';e.target.style.boxShadow='0 0 0 3px rgba(61,46,30,.08)'},onBlur:function(e){e.target.style.borderColor='#E8DDD5';e.target.style.boxShadow='none'}})),
-    h('div',null,
-      h('label',{className:'text-[11px] font-semibold mb-1 block',style:{color:'#5C4A36'}},'Select Service / Package'),
-      h('select',{value:svc,onChange:function(e){setSvc(e.target.value)},className:'w-full px-4 py-2.5 text-sm rounded-xl border cursor-pointer',style:{borderColor:'#E8DDD5',backgroundColor:'#FDF8F4',color:'#3D2E1E'},onFocus:function(e){e.target.style.borderColor='#5C4A36';e.target.style.boxShadow='0 0 0 3px rgba(61,46,30,.08)'},onBlur:function(e){e.target.style.borderColor='#E8DDD5';e.target.style.boxShadow='none'}},
-        h('option',{value:''},'Choose a service...'),
-        h('option',{value:'Swedish Massage - Rs. 5,000 (60 min)'},'Swedish Massage - Rs. 5,000 (60 min)'),
-        h('option',{value:'Thai Massage - Rs. 6,000 (60 min)'},'Thai Massage - Rs. 6,000 (60 min)'),
-        h('option',{value:'Deep Tissue Massage - Rs. 7,000 (60 min)'},'Deep Tissue Massage - Rs. 7,000 (60 min)'),
-        h('option',{value:'Aroma Therapy Massage - Rs. 7,000 (60 min)'},'Aroma Therapy Massage - Rs. 7,000 (60 min)'),
-        h('option',{value:'Bamboo Massage Special - Rs. 8,000 (60 min)'},'Bamboo Massage Special - Rs. 8,000 (60 min)'),
-        h('option',{value:'Premium Harmony Package - Rs. 15,500 (2 Hrs)'},'Premium Harmony Package - Rs. 15,500 (2 Hrs)'),
-        h('option',{value:'Ultimate Indulgence Package - Rs. 22,500 (3 Hrs)'},'Ultimate Indulgence Package - Rs. 22,500 (3 Hrs)'))),
-    h('div',{className:'grid grid-cols-2 gap-2'},
-      h('div',null,
-        h('label',{className:'text-[11px] font-semibold mb-1 block',style:{color:'#5C4A36'}},'Date'),
-        h('input',{type:'date',value:date,min:today,onChange:function(e){setDate(e.target.value)},className:'w-full px-4 py-2.5 text-sm rounded-xl border',style:{borderColor:'#E8DDD5',backgroundColor:'#FDF8F4',color:'#3D2E1E'},onFocus:function(e){e.target.style.borderColor='#5C4A36';e.target.style.boxShadow='0 0 0 3px rgba(61,46,30,.08)'},onBlur:function(e){e.target.style.borderColor='#E8DDD5';e.target.style.boxShadow='none'}})),
-      h('div',null,
-        h('label',{className:'text-[11px] font-semibold mb-1 block',style:{color:'#5C4A36'}},'Time Slot'),
-        h('select',{value:slot,onChange:function(e){setSlot(e.target.value)},className:'w-full px-4 py-2.5 text-sm rounded-xl border cursor-pointer',style:{borderColor:'#E8DDD5',backgroundColor:'#FDF8F4',color:'#3D2E1E'},onFocus:function(e){e.target.style.borderColor='#5C4A36';e.target.style.boxShadow='0 0 0 3px rgba(61,46,30,.08)'},onBlur:function(e){e.target.style.borderColor='#E8DDD5';e.target.style.boxShadow='none'}},
-          h('option',{value:''},'Select time...'),
-          SLOTS.map(function(s){return h('option',{key:s,value:s},s)})))),
-    err&&h('div',{className:'flex items-center gap-1.5 text-[11px]',style:{color:'#DC2626'}},h(I.Alert,{s:12}),err),
-    h('button',{type:'submit',disabled:status==='sending',className:'w-full py-2.5 rounded-full text-sm font-bold transition-all flex items-center justify-center gap-2',style:{backgroundColor:'#3D2E1E',color:'#fff',opacity:status==='sending'?.7:1,cursor:status==='sending'?'wait':'pointer'},onMouseEnter:function(e){e.currentTarget.style.backgroundColor='#5C4A36';e.currentTarget.style.transform='scale(1.01)'},onMouseLeave:function(e){e.currentTarget.style.backgroundColor='#3D2E1E';e.currentTarget.style.transform=''}},
-      status==='sending'?h(I.Loader,{s:14,cl:'animate-spin'}):h(I.Cal,{s:14}),status==='sending'?'Booking...':'Confirm Appointment'),
-    h('p',{className:'text-[10px] text-center',style:{color:'#A8937B'}},'Opens WhatsApp with your booking details'));
 }
 
-// === BOOK INTRO CARD (WhatsApp shortcuts) ===
-function BKC(){
-  var bs=[
-    {l:'Basic Bliss',m:'Assalam-o-Alaikum Relax Spa, main '+f(7500)+" wala 'Basic Bliss Package' book karwana chahta hoon.",c:A.gold},
-    {l:'Standard Serenity',m:'Assalam-o-Alaikum Relax Spa, main '+f(11500)+" wala 'Standard Serenity Package' book karwana chahta hoon.",c:A.warm},
-    {l:'Premium Harmony',m:'Assalam-o-Alaikum Relax Spa, main '+f(15500)+" wala 'Premium Harmony Package' book karwana chahta hoon.",c:A.amber},
-    {l:'Ultimate Indulgence',m:'Assalam-o-Alaikum Relax Spa, main '+f(22500)+" wala 'Ultimate Indulgence Package' book karwana chahta hoon.",c:A.rose},
-  ];
-  return h('div',{className:'space-y-3',style:{marginTop:12}},
-    // WhatsApp shortcuts
-    h('div',null,
-      h('div',{className:'text-xs font-semibold mb-2',style:{color:'#5C4A36'}},'Quick WhatsApp Booking'),
-      h('div',{className:'grid grid-cols-1 sm:grid-cols-2 gap-2'},
-        bs.map(function(b,i){return h('a',{key:i,href:wa(b.m),target:'_blank',rel:'noreferrer',
-          className:'bg-white rounded-2xl border p-3 flex items-center gap-2.5 transition-all',
-          style:{borderColor:'#E8DDD5'},
-          onMouseEnter:function(e){e.currentTarget.style.transform='translateY(-2px)';e.currentTarget.style.boxShadow='0 4px 16px rgba(61,46,30,.1)'},
-          onMouseLeave:function(e){e.currentTarget.style.transform='';e.currentTarget.style.boxShadow=''}},
-          h('div',{className:'w-8 h-8 rounded-xl flex items-center justify-center shrink-0',style:{backgroundColor:b.c+'20'}},h(I.Msg,{s:13,style:{color:b.c}})),
-          h('div',{className:'flex-1 min-w-0'},h('div',{className:'text-sm font-semibold truncate',style:{color:'#3D2E1E'}},b.l),h('div',{className:'text-[10px]',style:{color:'#A8937B'}},'Book via WhatsApp')));}))),
-    // Booking Form
-    h('div',{className:'pt-2'},h(BKF,null)));
+async function sendMessage() {
+  const input = document.getElementById('user-input');
+  const btn = document.getElementById('send-btn');
+  const text = input.value.trim();
+  if (!text || btn.disabled) return;
+  addUser(text); input.value = ''; btn.disabled = true;
+  showTyping();
+  await new Promise(function(r){setTimeout(r,700+Math.random()*500)});
+  const reply = await getReply(text);
+  removeTyping(); addBot(reply); btn.disabled = false; input.focus();
 }
 
-// === UPDATED PACKAGES CARD ===
-function PKG(p){
-  return h('div',{className:'grid grid-cols-1 sm:grid-cols-2 gap-2',style:{marginTop:12}},
-    p.it.map(function(x){return h('div',{key:x.id,className:'bg-white rounded-2xl border p-4 transition-all',
-      style:{borderColor:'#E8DDD5'},
-      onMouseEnter:function(e){e.currentTarget.style.transform='translateY(-2px)';e.currentTarget.style.boxShadow='0 4px 16px rgba(61,46,30,.1)'},
-      onMouseLeave:function(e){e.currentTarget.style.transform='';e.currentTarget.style.boxShadow=''}},
-      h('div',{className:'flex items-start justify-between gap-2'},
-        h('div',{className:'flex items-center gap-2'},
-          h('div',{className:'w-8 h-8 rounded-xl flex items-center justify-center',style:{backgroundColor:x.a+'20'}},h(I.Sparkles,{s:14,style:{color:x.a}})),
-          h('div',null,h('div',{className:'text-sm font-semibold',style:{color:'#3D2E1E'}},x.n),h('div',{className:'text-[10px]',style:{color:'#A8937B',marginTop:2}},x.d))),
-        x.tag&&h('span',{className:'text-[9px] px-2 py-0.5 rounded-full font-semibold',style:{backgroundColor:x.a+'26',color:x.a===A.amber?'#92400E':'#5C4A36',border:'1px solid '+x.a+'4D'}},x.tag)),
-      h('div',{className:'flex items-baseline gap-2',style:{marginTop:12}},
-        h('span',{className:'text-lg font-bold',style:{color:'#3D2E1E'}},f(x.v)),
-        h('span',{className:'text-[10px] line-through',style:{color:'#A8937B'}},f(x.no)),
-        h('span',{className:'text-[9px] px-1.5 py-0.5 rounded-md font-semibold',style:{backgroundColor:'#3D2E1E',color:'#fff'}},'VIP')),
-      h('div',{className:'text-[11px]',style:{color:'#8B7355',marginTop:8}},x.t),
-      h('a',{href:wa("Assalam-o-Alaikum Relax Spa, main "+f(x.no)+" wala '"+x.n+" Package' book karwana chahta hoon."),target:'_blank',rel:'noreferrer',
-        className:'w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold transition-all',
-        style:{marginTop:12,backgroundColor:'#3D2E1E',color:'#fff'},
-        onMouseEnter:function(e){e.currentTarget.style.backgroundColor='#5C4A36';e.currentTarget.style.transform='scale(1.02)'},
-        onMouseLeave:function(e){e.currentTarget.style.backgroundColor='#3D2E1E';e.currentTarget.style.transform=''}},
-        h(I.Msg,{s:12}),' Book on WhatsApp'}))}
+function quickAsk(text) {
+  document.getElementById('user-input').value = text;
+  sendMessage();
 }
-
-// === SERVICES CARD ===
-function SVC(p){
-  return h('div',{className:'space-y-2',style:{marginTop:12}},
-    p.it.map(function(s){return h('div',{key:s.id,className:'bg-white rounded-2xl border p-4 transition-all',
-      style:{borderColor:'#E8DDD5'},
-      onMouseEnter:function(e){e.currentTarget.style.transform='translateY(-2px)';e.currentTarget.style.boxShadow='0 4px 16px rgba(61,46,30,.1)'},
-      onMouseLeave:function(e){e.currentTarget.style.transform='';e.currentTarget.style.boxShadow=''}},
-      h('div',{className:'flex items-start gap-3'},
-        h('div',{className:'w-8 h-8 rounded-xl flex items-center justify-center shrink-0',style:{backgroundColor:s.a+'20'}},h(I.Heart,{s:14,style:{color:s.a}})),
-        h('div',{className:'flex-1 min-w-0'},
-          h('div',{className:'text-sm font-semibold',style:{color:'#3D2E1E'}},s.n),
-          h('div',{className:'text-[11px]',style:{color:'#A8937B',marginTop:2}},s.sb),
-          h('div',{className:'text-[12px] leading-relaxed',style:{color:'#8B7355',marginTop:6}},s.ds),
-          h('div',{className:'flex items-center gap-2 flex-wrap',style:{marginTop:10}},
-            h('span',{className:'text-[11px] px-2 py-1 rounded-full font-semibold',style:{backgroundColor:'#F5EDE5',color:'#3D2E1E'}},'60 min '+'\u00b7 '+f(s.p6)),
-            h('span',{className:'text-[11px] px-2 py-1 rounded-full font-semibold',style:{backgroundColor:s.a+'26',color:s.a===A.amber?'#92400E':s.a===A.rose?'#B45309':'#5C4A36'}},'90 min '+'\u00b7 '+f(s.p9)),
-            h('a',{href:wa("Assalam-o-Alaikum Relax Spa, main "+s.n+" ka VIP session book karwana chahta hoon. (Includes Welcome + After Drinks)"),target:'_blank',rel:'noreferrer',
-              className:'inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-semibold ml-auto transition-all',
-              style:{backgroundColor:'#3D2E1E',color:'#fff'},
-              onMouseEnter:function(e){e.currentTarget.style.backgroundColor='#5C4A36'},
-              onMouseLeave:function(e){e.currentTarget.style.backgroundColor='#3D2E1E'}},
-              h(I.Msg,{s:10}),' Book')))))}));
-}
-
-// === PRICING CARD ===
-function PRC(){
-  return h('div',{className:'bg-white rounded-2xl border overflow-hidden divide-y',style:{marginTop:12,borderColor:'#E8DDD5'}},
-    h('div',{className:'px-4 py-3 flex items-center gap-2',style:{backgroundColor:'#FDF8F4',borderBottom:'1px solid '+A.border}},
-      h(I.Tag,{s:12,style:{color:'#D4A056'}}),h('span',{className:'text-xs font-semibold',style:{color:'#3D2E1E'}},'VIP Packages')),
-    PK.map(function(p){return h('div',{key:p.id,className:'px-4 py-2.5 flex items-center gap-3 hover:bg-[#FDF8F4] transition-colors cursor-pointer'},
-      h('span',{className:'w-2 h-2 rounded-full shrink-0',style:{backgroundColor:p.a}}),
-      h('span',{className:'flex-1 text-sm font-medium truncate',style:{color:'#3D2E1E'}},p.n),
-      h('span',{className:'text-[10px] line-through',style:{color:'#A8937B'}},f(p.no)),
-      h('span',{className:'text-sm font-semibold',style:{color:'#3D2E1E'}},f(p.v)))}),
-    h('div',{className:'px-4 py-3 flex items-center gap-2',style:{backgroundColor:'#FDF8F4',borderTop:'1px solid '+A.border}},
-      h(I.Heart,{s:12,style:{color:'#C97B6B'}}),h('span',{className:'text-xs font-semibold',style:{color:'#3D2E1E'}},'Individual Services')),
-    SV.map(function(s){return h('div',{key:s.id,className:'px-4 py-2.5 flex items-center gap-3 hover:bg-[#FDF8F4] transition-colors cursor-pointer'},
-      h('span',{className:'flex-1 text-sm font-medium truncate',style:{color:'#3D2E1E'}},s.n),
-      h('span',{className:'text-[10px]',style:{color:'#A8937B'}},f(s.p6)),
-      h('span',{className:'text-sm font-semibold',style:{color:'#3D2E1E'}},f(s.p9),h('span',{className:'text-[10px] font-normal',style:{color:'#A8937B'}},' /90')))}));
-}
-
-// === CONTACT CARD ===
-function CTC(){
-  var rows=[
-    {ic:I.Clock,c:A.gold,l:'Hours',v:'11 AM \u2013 11 PM \u00b7 7 days',ac:null},
-    {ic:I.Pin,c:A.rose,l:'Location',v:'G-9 Markaz, Islamabad, 44000',ac:{hr:'https://maps.app.goo.gl/TsWUu7MabE2g7WVx8',lb:'Map',ic:I.ExtLink,st:{backgroundColor:A.cream,color:'#5C4A36',border:'1px solid '+A.border}}},
-    {ic:I.Phone,c:A.sage,l:'Phone / WhatsApp',v:'+92 300 9050666',ac:{hr:wa('Assalam-o-Alaikum Relax Spa, mujhe VIP session book karwana hai.'),lb:'Chat',ic:I.Msg,st:{backgroundColor:A.sage+'26',color:'#166534',border:'1px solid '+A.sage+'4D'}}},
-    {ic:I.Mail,c:A.amber,l:'Email',v:'info@relaxspa.pk',ac:null},
-  ];
-  return h('div',{className:'bg-white rounded-2xl border p-4 space-y-2.5',style:{marginTop:12,borderColor:'#E8DDD5'}},
-    rows.map(function(r,i){return h('div',{key:i,className:'flex items-center gap-2.5'},
-      h('div',{className:'w-8 h-8 rounded-xl flex items-center justify-center',style:{backgroundColor:r.c+'20'}},h(r.ic,{s:14,style:{color:r.c}})),
-      h('div',{className:'flex-1'},h('div',{className:'text-[11px]',style:{color:'#A8937B'}},r.l),h('div',{className:'text-sm font-medium',style:{color:'#3D2E1E'}},r.v)),
-      r.ac&&h('a',{href:r.ac.hr,target:'_blank',rel:'noreferrer',className:'text-[11px] px-2.5 py-1 rounded-full font-semibold inline-flex items-center gap-1 transition-all',style:r.ac.st,onMouseEnter:function(e){e.currentTarget.style.opacity='.8'},onMouseLeave:function(e){e.currentTarget.style.opacity='1'}},h(r.ac.ic,{s:10}),r.ac.lb))}));
-}
-
-// === FAQ CARD ===
-function FAQ(){
-  var ics={Star:I.Star,Cal:I.Cal,Pin:I.Pin,Gift:I.Gift};
-  return h('div',{className:'space-y-2',style:{marginTop:12}},
-    FAQS.map(function(f,i){var ic=ics[f.ic]||I.Star;
-      return h('div',{key:i,className:'bg-white rounded-2xl border p-3.5',style:{borderColor:'#E8DDD5'}},
-        h('div',{className:'flex items-start gap-2.5'},
-          h('div',{className:'w-7 h-7 rounded-xl flex items-center justify-center shrink-0',style:{marginTop:2,backgroundColor:A.cream}},h(ic,{s:12,style:{color:'#5C4A36'}})),
-          h('div',{className:'flex-1'},h('div',{className:'text-sm font-semibold',style:{color:'#3D2E1E'}},f.q),h('div',{className:'text-[12px] leading-relaxed',style:{color:'#8B7355',marginTop:4}},f.a))));}));
-}
-
-// === BOT MESSAGE ===
-function BotMsg(p){var cd=p.m.cd;
-  return h('div',{className:'flex items-start gap-2.5 max-w-[92%]'},
-    h('div',{className:'w-8 h-8 rounded-2xl flex items-center justify-center shrink-0',style:{marginTop:2,backgroundColor:'#3D2E1E'}},h(I.Sparkles,{s:14,style:{color:'#D4A056'}})),
-    h('div',{className:'flex-1 min-w-0'},
-      h('div',{className:'bg-white rounded-2xl rounded-tl-md border px-4 py-3',style:{borderColor:'#E8DDD5'}},h(TB,{t:p.m.t})),
-      cd&&cd.tp==='packages'&&h(PKG,{it:cd.it}),cd&&cd.tp==='services'&&h(SVC,{it:cd.it}),
-      cd&&cd.tp==='pricing'&&h(PRC,null),cd&&cd.tp==='contact'&&h(CTC,null),
-      cd&&cd.tp==='book'&&h(BKC,null),cd&&cd.tp==='faq'&&h(FAQ,null),
-      cd&&cd.tp==='timings'&&h(TMC,null),cd&&cd.tp==='reviews'&&h(RVC,{it:cd.it}),
-      cd&&cd.tp==='pk-detail'&&h(PKG,{it:[cd.it]}),cd&&cd.tp==='sv-detail'&&h(SVC,{it:[cd.it]})));}
-
-function UserMsg(p){return h('div',{className:'flex items-start gap-2.5 max-w-[92%] ml-auto flex-row-reverse'},
-  h('div',{className:'w-8 h-8 rounded-2xl flex items-center justify-center shrink-0',style:{marginTop:2,backgroundColor:'#5C4A36'}},h(I.User,{s:14,style:{color:'#F5EDE5'}})),
-  h('div',{className:'rounded-2xl rounded-tr-md px-4 py-3 text-sm',style:{backgroundColor:'#3D2E1E',color:'#FDF8F4'}},p.t));}
-
-// === INTENT PROCESSOR ===
-function proc(i){
-  if(i.indexOf('bkpk:')===0){var p=PK.find(function(x){return x.id===i.split(':')[1]});if(p){var m="Assalam-o-Alaikum Relax Spa, main "+f(p.no)+" wala '"+p.n+" Package' book karwana chahta hoon.";window.open(wa(m),'_blank','noopener,noreferrer');return{t:'Opening WhatsApp to book **'+p.n+'** \u2014 VIP price '+f(p.v)+'. Our team will confirm your slot right away.',c:[{l:'Other Packages',i:'packages'},{l:'View Services',i:'services'},{l:'Reviews',i:'reviews'}]}}}
-  if(i.indexOf('bksv:')===0){var s=SV.find(function(x){return x.id===i.split(':')[1]});if(s){var m="Assalam-o-Alaikum Relax Spa, main "+s.n+" ka VIP session book karwana chahta hoon. (Includes Welcome + After Drinks)";window.open(wa(m),'_blank','noopener,noreferrer');return{t:'Opening WhatsApp to book **'+s.n+'** \u2014 60 min '+f(s.p6)+' \u00b7 90 min '+f(s.p9)+'.',c:[{l:'Other Services',i:'services'},{l:'View Packages',i:'packages'},{l:'Reviews',i:'reviews'}]}}}
-  return rp(i);}
-
-// === MAIN APP ===
-function App(){
-  var _ms=useState(function(){var r=rp('greet');return[{r:'bot',t:r.t,cd:r.cd,c:r.c}]}),msgs=_ms[0],setMsgs=_ms[1];
-  var _in=useState(''),inp=_in[0],setInp=_in[1];
-  var _th=useState(false),thk=_th[0],setThk=_th[1];
-  var sr=useRef(null),ir=useRef(null);
-
-  useEffect(function(){var el=sr.current;if(el)el.scrollTop=el.scrollHeight},[msgs,thk]);
-
-  function snd(t){var txt=String(t||'').trim();if(!txt)return;
-    setMsgs(function(p){return p.concat([{r:'user',t:txt}])});setInp('');setThk(true);
-    var intent=rt(txt);
-    setTimeout(function(){var r=proc(intent);setMsgs(function(p){return p.concat([{r:'bot',t:r.t,cd:r.cd,c:r.c}])});setThk(false);if(ir.current)ir.current.focus()},380);}
-
-  function chp(ch){setMsgs(function(p){return p.concat([{r:'user',t:ch.l}])});setThk(true);
-    setTimeout(function(){var r=proc(ch.i);setMsgs(function(p){return p.concat([{r:'bot',t:r.t,cd:r.cd,c:r.c}])});setThk(false);if(ir.current)ir.current.focus()},320);}
-
-  var lastBot=useMemo(function(){for(var i=msgs.length-1;i>=0;i--){if(msgs[i].r==='bot')return msgs[i]}return null},[msgs]);
-  var curChips=(lastBot&&lastBot.c)?lastBot.c:CH;
-
-  return h('div',{className:'flex flex-col',style:{minHeight:'100vh',backgroundColor:'#FDF8F4'}},
-    // HEADER
-    h('div',{className:'sticky top-0 z-50',style:{backgroundColor:'rgba(255,255,255,.88)',backdropFilter:'blur(24px)',WebkitBackdropFilter:'blur(24px)',borderBottom:'1px solid '+A.border}},
-      h('div',{className:'max-w-3xl mx-auto px-5 py-4 flex items-center gap-3'},
-        h('div',{className:'w-10 h-10 rounded-2xl flex items-center justify-center relative',style:{backgroundColor:'#3D2E1E'}},
-          h('div',{style:{fontSize:16,color:'#D4A056',fontWeight:700}},'\u2728'),
-          h('span',{className:'absolute w-2.5 h-2.5 rounded-full border-2 border-white animate-pulse-dot',style:{top:-2,right:-2,backgroundColor:'#8DA691'}})),
-        h('div',{className:'flex-1 min-w-0'},
-          h('div',{className:'text-sm font-bold tracking-tight truncate',style:{color:'#3D2E1E'}},'Relax Spa Assistant'),
-          h('div',{className:'text-[11px] flex items-center gap-1.5',style:{color:'#A8937B',marginTop:2}},
-            h('span',{style:{color:'#8DA691'}},'\u25cf'),'Online \u00b7 Islamabad \u00b7 G-9 Markaz')),
-        h('a',{href:wa('Assalam-o-Alaikum Relax Spa, mujhe VIP session book karwana hai.'),target:'_blank',rel:'noreferrer',
-          className:'hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold transition-all',
-          style:{backgroundColor:'#8DA69126',color:'#166534',border:'1px solid #8DA6914D'},
-          onMouseEnter:function(e){e.currentTarget.style.backgroundColor='#8DA6913F'},
-          onMouseLeave:function(e){e.currentTarget.style.backgroundColor='#8DA69126'}},
-          h(I.Msg,{s:11}),' WhatsApp'))),
-    // MESSAGES
-    h('div',{ref:sr,className:'flex-1 overflow-y-auto'},
-      h('div',{className:'max-w-3xl mx-auto px-5 py-6 space-y-4'},
-        msgs.map(function(m,i){return h('div',{key:i,className:'animate-fadeIn'},m.r==='bot'?h(BotMsg,{m:m}):h(UserMsg,{t:m.t}))}),
-        thk&&h('div',{className:'flex items-start gap-2.5 max-w-[92%] animate-fadeIn'},
-          h('div',{className:'w-8 h-8 rounded-2xl flex items-center justify-center shrink-0',style:{backgroundColor:'#3D2E1E'}},h(I.Sparkles,{s:14,style:{color:'#D4A056'}})),
-          h('div',{className:'bg-white rounded-2xl rounded-tl-md border px-4 py-3 flex items-center gap-1.5',style:{borderColor:'#E8DDD5'}},
-            h('span',{className:'w-1.5 h-1.5 rounded-full animate-bounce-dot delay-0',style:{backgroundColor:'#D4A056'}}),
-            h('span',{className:'w-1.5 h-1.5 rounded-full animate-bounce-dot delay-150',style:{backgroundColor:'#D4A056'}}),
-            h('span',{className:'w-1.5 h-1.5 rounded-full animate-bounce-dot delay-300',style:{backgroundColor:'#D4A056'}}))))),
-    // COMPOSER
-    h('div',{className:'sticky bottom-0',style:{backgroundColor:'rgba(255,255,255,.9)',backdropFilter:'blur(24px)',WebkitBackdropFilter:'blur(24px)',borderTop:'1px solid '+A.border}},
-      h('div',{className:'max-w-3xl mx-auto px-5 pt-3 pb-4'},
-        h('div',{className:'flex gap-1.5 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-thin'},
-          curChips.map(function(c,i){return h('button',{key:i,onClick:function(){chp(c)},className:'shrink-0 px-3 py-1.5 rounded-full text-[12px] font-medium transition-all whitespace-nowrap',style:{backgroundColor:A.cream,color:'#5C4A36',border:'1px solid transparent'},
-            onMouseEnter:function(e){e.currentTarget.style.backgroundColor='#3D2E1E';e.currentTarget.style.color='#fff';e.currentTarget.style.borderColor='#3D2E1E'},
-            onMouseLeave:function(e){e.currentTarget.style.backgroundColor=A.cream;e.currentTarget.style.color='#5C4A36';e.currentTarget.style.borderColor='transparent'}},c.l)})),
-        h('form',{onSubmit:function(e){e.preventDefault();snd(inp)},className:'flex items-center gap-2',style:{marginTop:4}},
-          h('div',{className:'flex-1 relative'},
-            h('input',{ref:ir,autoFocus:true,value:inp,onChange:function(e){setInp(e.target.value)},placeholder:'Ask about packages, prices, timings, booking\u2026',
-              className:'w-full pl-4 pr-4 py-3 text-sm border rounded-full',style:{backgroundColor:'#fff',color:'#3D2E1E',borderColor:'#E8DDD5',outline:'none'},
-              onFocus:function(e){e.target.style.borderColor='#5C4A36';e.target.style.boxShadow='0 0 0 3px rgba(61,46,30,.08)'},
-              onBlur:function(e){e.target.style.borderColor='#E8DDD5';e.target.style.boxShadow='none'}})),
-          h('button',{type:'submit',disabled:!inp.trim()||thk,
-            className:'w-11 h-11 rounded-full flex items-center justify-center shadow-sm transition-all',
-            style:{backgroundColor:'#3D2E1E',color:'#FDF8F4',opacity:(!inp.trim()||thk)?.4:1,cursor:(!inp.trim()||thk)?'not-allowed':'pointer'},
-            onMouseEnter:function(e){if(!(!inp.trim()||thk)){e.currentTarget.style.backgroundColor='#5C4A36';e.currentTarget.style.boxShadow='0 4px 16px rgba(61,46,30,.15)'}},
-            onMouseLeave:function(e){e.currentTarget.style.backgroundColor='#3D2E1E';e.currentTarget.style.boxShadow=''}},
-            thk?h(I.Loader,{s:16,cl:'animate-spin'}):h(I.Send,{s:15}))),
-        h('p',{className:'text-[10px] text-center',style:{color:'#A8937B',marginTop:8}},'Powered by Relax Spa \u00b7 G-9 Markaz Islamabad \u00b7 Pre-booking only via WhatsApp'))));
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(h(App,null));
-</script></body></html>
+</script>
+</body>
+</html>
