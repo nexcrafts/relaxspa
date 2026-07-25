@@ -575,25 +575,32 @@ async function getReply(msg) {
   }
 }
 
-function quickAsk(text) {
-  var inp = document.getElementById('user-input');
-  inp.value = text;
-  sendMessage();
-}
-
-function sendMessage() {
+function sendMessage(fromChip) {
   var inp = document.getElementById('user-input');
   var btn = document.getElementById('send-btn');
   var text = inp.value.trim();
   if (!text || btn.disabled) return;
-  addUser(text); inp.value = ''; inp.blur(); btn.disabled = true;
+  addUser(text); inp.value = ''; btn.disabled = true;
+  // blur input to prevent keyboard on mobile
+  inp.blur(); inp.setAttribute('readonly','readonly');
   showTyping();
   var reply = getReply(text);
+  var done = function(r){
+    removeTyping(); addBot(r); btn.disabled = false;
+    inp.removeAttribute('readonly');
+    if (fromChip !== true) { inp.focus(); }
+  };
   if (reply && typeof reply.then === 'function') {
-    reply.then(function(r){ removeTyping(); addBot(r); btn.disabled = false; inp.focus(); });
+    reply.then(done);
   } else {
-    removeTyping(); addBot(reply); btn.disabled = false; inp.focus();
+    done(reply);
   }
+}
+
+function quickAsk(text) {
+  var inp = document.getElementById('user-input');
+  inp.value = text;
+  sendMessage(true);
 }
 </script>
 </body>
